@@ -43,7 +43,7 @@ class Home extends BaseController
     public function makeJuiceAction()
     {
         echo htmlspecialchars(print_r($this->route_params, true));
-        echo 'made a juice';
+        echo 'made a juice plz';
     }
 }
 ```

@@ -1,51 +1,44 @@
-# Starlight Starter Kit: Basics
+# CannonPHP MVC Framework
 
-```
-npm create astro@latest -- --template starlight
-```
+[![License: MIT](https://img.shields.io/badge/license-MIT-green)](https://opensource.org/licenses/MIT)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/starlight/tree/main/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/starlight/tree/main/examples/basics)
+Cannon MVC is an exceptional web application framework that embraces an expressive and elegant syntax. We strongly believe that development should be an enjoyable and creative experience, leading to true fulfillment. With Cannon MVC, you can bid farewell to the cumbersome aspects of development by effortlessly handling common tasks encountered in numerous web projects. Some of the remarkable benefits and features of Cannon MVC include:
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Features
 
-## 🚀 Project Structure
+- **Routing**: The framework offers a powerful routing system that effortlessly maps incoming requests to controller actions.
+- **Di container**: Simplifies the management of dependencies, promoting loose coupling and flexible object creation and handling.
+- **session and cache storage**: Provides seamless integration with multiple session and cache drivers for efficient data storage.
+- **Tempalte engine**: Supports the popular Twig template engine out of the box, or allows the use of your preferred choice.
+- **Hooks**: Enables the execution of custom code before and after controller actions for enhanced customization.
+- **Database ORM**: Includes an intuitive and feature-rich database ORM that simplifies database operations within the framework.
 
-Inside of your Astro + Starlight project, you'll see the following folders and files:
+## Requirements
 
-```
-.
-├── public/
-├── src/
-│   ├── assets/
-│   ├── content/
-│   │   ├── docs/
-│   │   └── config.ts
-│   └── env.d.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
-```
+- PHP version 8 or higher
+- Composer (https://getcomposer.org) for dependency management
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+## Installation
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+1. Clone the repository or download the source code.
+2. Run `composer install` to install the required dependencies.
+3. Configure your web server to point to the public directory as the document root.
+4. Customize the framework's `Config.php` file located in the `App` directory, such as database settings, routes, etc.
+5. Start building your application by creating controllers, models, and views in their respective directories.
 
-Static assets, like favicons, can be placed in the `public/` directory.
+## Usage
 
-## 🧞 Commands
+1. Define your application routes in the `routes.php` file located in the `App` directory.
+2. Create controllers in the `App/Controller` directory to handle different actions.
+3. Define models in the `App/Model` directory to interact with the database.
+4. Create views in the `App/View` directory to render the presentation layer.
+5. Customize the `BaseController` class according to your application's needs if necessary.
+6. Extends the framework by adding your own service to the framework using service provider if necessary.
 
-All commands are run from the root of the project, from a terminal:
+## Contributing
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:3000`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
 
-## 👀 Want to learn more?
+## License
 
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+This MVC framework is open-source software licensed under the [MIT License](https://opensource.org/licenses/MIT).
