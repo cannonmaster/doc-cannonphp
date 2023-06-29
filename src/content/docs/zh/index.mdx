@@ -1,0 +1,37 @@
+---
+title: 欢迎来到 CannonPHP
+description: CannonPHP
+template: splash
+hero:
+  tagline: 拥抱 PHP 的光辉！
+  image:
+    file: ../../../assets/houston.webp
+  actions:
+    - text: 阅读文档
+      link: basics/controller/
+      icon: right-arrow
+      variant: primary
+    - text: 开始使用
+      link: https://github.com/cannonmaster/CannonPHP
+      icon: external
+---
+
+import { Card, CardGrid } from "@astrojs/starlight/components";
+
+## 框架特色
+
+<CardGrid stagger>
+  <Card title="CP ORM" icon="pencil">
+    简化数据库操作，提高开发效率。
+  </Card>
+  <Card title="CP Routing" icon="add-document">
+    灵活匹配 URL，实现页面导航和请求处理。
+  </Card>
+  <Card title="模版引擎" icon="setting">
+    分离逻辑与表现，实现可重用和可维护的视图模板。
+  </Card>
+  <Card title="还有更多" icon="open-book">
+    更多特色功能欢迎查阅文档，更多功能将会陆续添加。[CannonPHP
+    文档](zh/basics/controller/)。
+  </Card>
+</CardGrid>
