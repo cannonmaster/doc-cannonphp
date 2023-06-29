@@ -3,7 +3,7 @@ import starlight from "@astrojs/starlight";
 
 // https://astro.build/config
 export default defineConfig({
-  base: "/doc-CannonPHP",
+  base: "/doc-cannonphp",
   integrations: [
     starlight({
       title: "CannonPHP",
