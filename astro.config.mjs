@@ -25,10 +25,10 @@ export default defineConfig({
           translations: { zh: "Cascase ORM" },
           autogenerate: { directory: "cascadeorm" },
         },
-        {
-          label: "Reference",
-          autogenerate: { directory: "reference" },
-        },
+        // {
+        //   label: "Reference",
+        //   autogenerate: { directory: "reference" },
+        // },
       ],
       defaultLocale: "en",
       locales: {

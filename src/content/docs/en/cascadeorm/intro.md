@@ -1,9 +1,7 @@
 ---
-title: Cascade ORM
+title: Intro
 description: intro
 ---
-
-### Introduction
 
 CannonPHP includes CascadeORM, an object-relational mapper (ORM) that provides a convenient way to interact with your database. CascadeORM allows you to perform various operations such as retrieving, inserting, updating, and deleting records from your database tables. This guide will walk you through the basic usage of CascadeORM.
 
