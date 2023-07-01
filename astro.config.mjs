@@ -20,10 +20,15 @@ export default defineConfig({
           //   { label: "Example Guide", link: "guides/example/" },
           // ],
         },
-        // {
-        //   label: "Reference",
-        //   autogenerate: { directory: "reference" },
-        // },
+        {
+          label: "Cascade ORM",
+          translations: { zh: "Cascase ORM" },
+          autogenerate: { directory: "cascadeorm" },
+        },
+        {
+          label: "Reference",
+          autogenerate: { directory: "reference" },
+        },
       ],
       defaultLocale: "en",
       locales: {
