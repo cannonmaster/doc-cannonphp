@@ -21,11 +21,11 @@ Cascade relationships are like best friends to your Cascade model classes. They 
 $user->posts()->where('title', 'abc')->get();
 ```
 
-Before diving too deep into define the database table relationships, let's take a moment to understand how to define each type of relationship supported by CascadeORM. It's like laying a solid foundation before embarking on an exciting journey. So, let's get started and explore the magic of relationships!
+Before diving too deep into define the database table relationships, let's take a moment to understand how to define each type of relationship supported by CascadeORM.
 
 ### One To One
 
-A one-to-one relationship is a very basic type of database relationship. To define this relationship, we'll create a profile method in the User model. Inside the profile method, we'll use the hasOne method provided by the App\DB\ORM\Model base class. This method will establish the one-to-one relationship between the User and Profile models. So, go ahead and create that special bond between your models! They are meant to be together.
+A one-to-one relationship is a very basic type of database relationship. To define this relationship, we'll create a profile method in the User model. Inside the profile method, we'll use the hasOne method provided by the App\DB\ORM\Model base class. This method will establish the one-to-one relationship between the User and Profile models.
 
 ```php
 <?php
@@ -60,7 +60,7 @@ class User extends \App\DB\ORM\Model
 }
 ```
 
-When using the hasOne method, you need to pass the name of the related model class as the first argument. Once the relationship is defined, you can easily retrieve the related record using Cascade's dynamic properties. These dynamic properties work like magic, allowing you to access relationship methods as if they were actual properties defined on the model. It's a convenient and intuitive way to navigate through your model's relationships. So, go ahead and explore the world of dynamic properties in CascadeORM! They'll make your life easier.
+When using the hasOne method, you need to pass the name of the related model class as the first argument. Once the relationship is defined, you can easily retrieve the related record using Cascade's dynamic properties. These dynamic properties work like magic, allowing you to access relationship methods as if they were actual properties defined on the model. It's a convenient and intuitive way to navigate through your model's relationships.
 
 ```php
 // return city property value on the profile table which the id is 1
@@ -71,7 +71,7 @@ CascadeORM automatically determines the foreign key of the one-to-one relationsh
 
 ### Defining The Inverse Of The Relationship
 
-Now that we can access the Profile model from our User model, let's define a relationship on the Profile model that allows us to access the user who owns the profile. We can establish the inverse of a hasOne relationship using the belongsTo method. It's like completing the circle of friendship between our models. So, let's define this special bond and unlock the power of bidirectional relationships in CascadeORM!
+Now that we can access the Profile model from our User model, let's define a relationship on the Profile model that allows us to access the user who owns the profile. We can establish the inverse of a hasOne relationship using the belongsTo method. It's like completing the circle of friendship between our models.
 
 ```php
 <?php

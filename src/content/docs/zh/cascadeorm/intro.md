@@ -69,7 +69,7 @@ class User extends \App\DB\ORM\Model
 }
 ```
 
-另外，CascadeORM 假设主键是递增的整数值。因此，它会自动将主键转换为整数。如果您想使用非递增或非数字的主键，您可以在模型中定义一个公共的 `$incrementing` 属性，并将其设置为 `false`：
+另外，CascadeORM 假设主键是递增的整数值。因此，它会自动将主键转换为整数。如果您想使用非递增或非数字的主键，您可以在模型中定义一个`protected` 的 `$incrementing` 属性，并将其设置为 `false`：
 
 ```php
 <?php
@@ -100,7 +100,7 @@ class User extends \App\DB\ORM\Model
 }
 ```
 
-如果您的模型的主键不是整数，您还应该定义一个受保护的$keyType 属性，并将其值设为'string'。这会告诉 CascadeORM 主键是字符串类型的。
+如果您的模型的主键不是整数，您还应该定义一个`protected` 的$keyType 属性，并将其值设为'string'。这会告诉 CascadeORM 主键是字符串类型的。
 
 使用这些定制选项，CascadeORM 允许您适应数据库架构中不同的主键配置。
 
@@ -399,7 +399,7 @@ class User extends \App\DB\ORM\Model
 
 在上面的示例中，将 $incrementing 属性设置为 false 表示主键不是自增的，并且将 $keyType 属性设置为 'string' 表示主键是一个字符串类型。
 
-当使用 UUID 作为主键时，CascadeORM 会自动生成 UUID 作为新模型实例的主键。UUID 是一种通用唯一标识符，由 36 个字符组成，可以确保全局唯一性。你需要确保数据库表具有足够的存储空间来容纳 UUID 主键。
+当按照上面的配置之后，CannonPHP 将使用 UUID 作为主键，CascadeORM 也会自动帮你生成 UUID 作为新模型实例的主键。UUID 是一种通用唯一标识符，由 36 个字符组成，可以确保全局唯一性。你需要确保数据库表的主键具有足够的存储空间来容纳 UUID 。
 
 ### Command Builder
 

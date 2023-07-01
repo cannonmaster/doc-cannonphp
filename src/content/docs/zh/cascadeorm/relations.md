@@ -18,14 +18,14 @@ description: Cascade 数据表关系
 级联关系就像是 Cascade 模型类的最好朋友。它们被定义为方法，不仅建立了表之间的关系，还充当了强大的查询构建器。这意味着您可以链式添加其他查询约束，发挥方法链式调用和查询能力的全部潜力。就像拥有一对无缝合作的黄金搭档。所以，请随意探索和利用级联关系的威力，使您的数据库交互变得流畅高效。它们会一直支持您！E.g:
 
 ```php
-$user->posts()->where('title', 'abc')->get();
+$user->posts()->where('title','=','abc')->get();
 ```
 
 在深入探索数据表关系如何定义之前，让我们先了解一下 CascadeORM 支持的每种关系类型的定义方法。这就像在踏上激动人心的旅程之前打下坚实的基础。所以，让我们开始吧，探索关系的魔力吧！
 
 ### 一对一关系
 
-要定义这种关系，我们将在 User 模型中创建一个 profile 方法。在 profile 方法内部，我们将使用 App\DB\ORM\Model 基类提供的 hasOne 方法。这个方法将建立 User 和 Profile 模型之间的一对一关系。所以，赶紧创建这个特殊的联系吧！它们注定要在一起。
+要定义这种关系，我们将在 User 模型中创建一个 profile 方法。在 profile 方法内部，我们将使用 App\DB\ORM\Model 基类提供的 hasOne 方法。这个方法将建立 User 和 Profile 模型之间的一对一关系。所以，赶紧创建这个特殊的联系吧！
 
 ```php
 <?php
@@ -63,7 +63,7 @@ class User extends \App\DB\ORM\Model
 当使用 hasOne 方法时，您需要将相关模型类的名称作为第一个参数传递。一旦定义了关系，您就可以轻松地使用 Cascade 的动态属性检索相关记录。这些动态属性就像魔法一样工作，允许您访问关系方法，就像它们是模型上实际定义的属性一样。这是一种方便且直观的方式来浏览模型的关系。所以，请放心探索 CascadeORM 中的动态属性世界！它们会让您的生活变得更轻松。
 
 ```php
-// return city property value on the profile table which the id is 1
+// return city property value on the profile table which the user id is 1
 $user = User::find(1)->profile()->city;
 ```
 
@@ -108,7 +108,7 @@ class Profile extends \App\DB\ORM\Model
 
 CascadeORM 根据 belongsTo 方法的第二个参数确定了 User 表的主键。在这种情况下，列名 id 被用作主键。
 
-如果 Profile 模型不使用 id 作为其主键，或者您希望使用不同的列来查找关联模型，可以将第三个参数传递给 belongsTo 方法，以指定 Profile 表的自定义键。这是一个灵活的功能，允许您根据特定需求自定义关系。所以，尽管利用这个功能，在 CascadeORM 中使用不同的键建立关系吧！
+如果 Profile 表不使用 id 作为其主键，或者您希望使用不同的列来查找关联模型，可以将第三个参数传递给 belongsTo 方法，以指定 Profile 表的主键。这是一个灵活的功能，允许您根据特定需求自定义关系。
 
 ```php
 <?php
@@ -205,7 +205,7 @@ class Home extends  BaseController
 }
 ```
 
-由于 CascadeORM 中的关系也充当了强大的查询构建器，因此您可以灵活地向关系查询添加其他约束条件。只需调用`posts`方法，并继续在查询上链接条件以进一步细化结果。这就像给您的关系查询赋予了超能力！所以，请继续利用 CascadeORM 中的查询链式调用的全部潜力，精确调整您的关系查询。E.g:
+由于 CascadeORM 中的关系也充当了强大的查询构建器，因此您可以灵活地向关系查询添加其他约束条件。只需调用`posts`方法，并继续在查询上链接条件以进一步细化结果。E.g:
 
 ```php
 <?php
